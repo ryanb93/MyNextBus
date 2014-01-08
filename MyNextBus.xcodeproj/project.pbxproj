@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		940852B2187DCE4A006ADE66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940852B1187DCE4A006ADE66 /* Foundation.framework */; };
+		940852B4187DCE4A006ADE66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940852B3187DCE4A006ADE66 /* CoreGraphics.framework */; };
+		940852B6187DCE4A006ADE66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940852B5187DCE4A006ADE66 /* UIKit.framework */; };
+		940852BC187DCE4A006ADE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 940852BA187DCE4A006ADE66 /* InfoPlist.strings */; };
+		940852BE187DCE4A006ADE66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 940852BD187DCE4A006ADE66 /* main.m */; };
+		940852C2187DCE4A006ADE66 /* MNBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 940852C1187DCE4A006ADE66 /* MNBAppDelegate.m */; };
+		940852C4187DCE4A006ADE66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940852C3187DCE4A006ADE66 /* Images.xcassets */; };
+		940852CB187DCE4B006ADE66 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940852CA187DCE4B006ADE66 /* XCTest.framework */; };
+		940852CC187DCE4B006ADE66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940852B1187DCE4A006ADE66 /* Foundation.framework */; };
+		940852CD187DCE4B006ADE66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940852B5187DCE4A006ADE66 /* UIKit.framework */; };
+		940852D5187DCE4B006ADE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 940852D3187DCE4B006ADE66 /* InfoPlist.strings */; };
+		940852D7187DCE4B006ADE66 /* MyNextBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 940852D6187DCE4B006ADE66 /* MyNextBusTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		940852CE187DCE4B006ADE66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 940852A6187DCE4A006ADE66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 940852AD187DCE4A006ADE66;
+			remoteInfo = MyNextBus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		940852AE187DCE4A006ADE66 /* MyNextBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNextBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		940852B1187DCE4A006ADE66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		940852B3187DCE4A006ADE66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		940852B5187DCE4A006ADE66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		940852B9187DCE4A006ADE66 /* MyNextBus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyNextBus-Info.plist"; sourceTree = "<group>"; };
+		940852BB187DCE4A006ADE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		940852BD187DCE4A006ADE66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		940852BF187DCE4A006ADE66 /* MyNextBus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyNextBus-Prefix.pch"; sourceTree = "<group>"; };
+		940852C0187DCE4A006ADE66 /* MNBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBAppDelegate.h; sourceTree = "<group>"; };
+		940852C1187DCE4A006ADE66 /* MNBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBAppDelegate.m; sourceTree = "<group>"; };
+		940852C3187DCE4A006ADE66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		940852C9187DCE4B006ADE66 /* MyNextBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNextBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		940852CA187DCE4B006ADE66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		940852D2187DCE4B006ADE66 /* MyNextBusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyNextBusTests-Info.plist"; sourceTree = "<group>"; };
+		940852D4187DCE4B006ADE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		940852D6187DCE4B006ADE66 /* MyNextBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNextBusTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		940852AB187DCE4A006ADE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940852B4187DCE4A006ADE66 /* CoreGraphics.framework in Frameworks */,
+				940852B6187DCE4A006ADE66 /* UIKit.framework in Frameworks */,
+				940852B2187DCE4A006ADE66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940852C6187DCE4B006ADE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940852CB187DCE4B006ADE66 /* XCTest.framework in Frameworks */,
+				940852CD187DCE4B006ADE66 /* UIKit.framework in Frameworks */,
+				940852CC187DCE4B006ADE66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		940852A5187DCE4A006ADE66 = {
+			isa = PBXGroup;
+			children = (
+				940852B7187DCE4A006ADE66 /* MyNextBus */,
+				940852D0187DCE4B006ADE66 /* MyNextBusTests */,
+				940852B0187DCE4A006ADE66 /* Frameworks */,
+				940852AF187DCE4A006ADE66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		940852AF187DCE4A006ADE66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				940852AE187DCE4A006ADE66 /* MyNextBus.app */,
+				940852C9187DCE4B006ADE66 /* MyNextBusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		940852B0187DCE4A006ADE66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				940852B1187DCE4A006ADE66 /* Foundation.framework */,
+				940852B3187DCE4A006ADE66 /* CoreGraphics.framework */,
+				940852B5187DCE4A006ADE66 /* UIKit.framework */,
+				940852CA187DCE4B006ADE66 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		940852B7187DCE4A006ADE66 /* MyNextBus */ = {
+			isa = PBXGroup;
+			children = (
+				940852C0187DCE4A006ADE66 /* MNBAppDelegate.h */,
+				940852C1187DCE4A006ADE66 /* MNBAppDelegate.m */,
+				940852C3187DCE4A006ADE66 /* Images.xcassets */,
+				940852B8187DCE4A006ADE66 /* Supporting Files */,
+			);
+			path = MyNextBus;
+			sourceTree = "<group>";
+		};
+		940852B8187DCE4A006ADE66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				940852B9187DCE4A006ADE66 /* MyNextBus-Info.plist */,
+				940852BA187DCE4A006ADE66 /* InfoPlist.strings */,
+				940852BD187DCE4A006ADE66 /* main.m */,
+				940852BF187DCE4A006ADE66 /* MyNextBus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		940852D0187DCE4B006ADE66 /* MyNextBusTests */ = {
+			isa = PBXGroup;
+			children = (
+				940852D6187DCE4B006ADE66 /* MyNextBusTests.m */,
+				940852D1187DCE4B006ADE66 /* Supporting Files */,
+			);
+			path = MyNextBusTests;
+			sourceTree = "<group>";
+		};
+		940852D1187DCE4B006ADE66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				940852D2187DCE4B006ADE66 /* MyNextBusTests-Info.plist */,
+				940852D3187DCE4B006ADE66 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		940852AD187DCE4A006ADE66 /* MyNextBus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940852DA187DCE4B006ADE66 /* Build configuration list for PBXNativeTarget "MyNextBus" */;
+			buildPhases = (
+				940852AA187DCE4A006ADE66 /* Sources */,
+				940852AB187DCE4A006ADE66 /* Frameworks */,
+				940852AC187DCE4A006ADE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyNextBus;
+			productName = MyNextBus;
+			productReference = 940852AE187DCE4A006ADE66 /* MyNextBus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		940852C8187DCE4B006ADE66 /* MyNextBusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940852DD187DCE4B006ADE66 /* Build configuration list for PBXNativeTarget "MyNextBusTests" */;
+			buildPhases = (
+				940852C5187DCE4B006ADE66 /* Sources */,
+				940852C6187DCE4B006ADE66 /* Frameworks */,
+				940852C7187DCE4B006ADE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				940852CF187DCE4B006ADE66 /* PBXTargetDependency */,
+			);
+			name = MyNextBusTests;
+			productName = MyNextBusTests;
+			productReference = 940852C9187DCE4B006ADE66 /* MyNextBusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		940852A6187DCE4A006ADE66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MNB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ryan Burke";
+				TargetAttributes = {
+					940852C8187DCE4B006ADE66 = {
+						TestTargetID = 940852AD187DCE4A006ADE66;
+					};
+				};
+			};
+			buildConfigurationList = 940852A9187DCE4A006ADE66 /* Build configuration list for PBXProject "MyNextBus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 940852A5187DCE4A006ADE66;
+			productRefGroup = 940852AF187DCE4A006ADE66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				940852AD187DCE4A006ADE66 /* MyNextBus */,
+				940852C8187DCE4B006ADE66 /* MyNextBusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		940852AC187DCE4A006ADE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940852BC187DCE4A006ADE66 /* InfoPlist.strings in Resources */,
+				940852C4187DCE4A006ADE66 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940852C7187DCE4B006ADE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940852D5187DCE4B006ADE66 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		940852AA187DCE4A006ADE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940852C2187DCE4A006ADE66 /* MNBAppDelegate.m in Sources */,
+				940852BE187DCE4A006ADE66 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940852C5187DCE4B006ADE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				940852D7187DCE4B006ADE66 /* MyNextBusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		940852CF187DCE4B006ADE66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 940852AD187DCE4A006ADE66 /* MyNextBus */;
+			targetProxy = 940852CE187DCE4B006ADE66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		940852BA187DCE4A006ADE66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				940852BB187DCE4A006ADE66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		940852D3187DCE4B006ADE66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				940852D4187DCE4B006ADE66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		940852D8187DCE4B006ADE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		940852D9187DCE4B006ADE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		940852DB187DCE4B006ADE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyNextBus/MyNextBus-Prefix.pch";
+				INFOPLIST_FILE = "MyNextBus/MyNextBus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		940852DC187DCE4B006ADE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyNextBus/MyNextBus-Prefix.pch";
+				INFOPLIST_FILE = "MyNextBus/MyNextBus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		940852DE187DCE4B006ADE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyNextBus.app/MyNextBus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyNextBus/MyNextBus-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MyNextBusTests/MyNextBusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		940852DF187DCE4B006ADE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyNextBus.app/MyNextBus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyNextBus/MyNextBus-Prefix.pch";
+				INFOPLIST_FILE = "MyNextBusTests/MyNextBusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		940852A9187DCE4A006ADE66 /* Build configuration list for PBXProject "MyNextBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940852D8187DCE4B006ADE66 /* Debug */,
+				940852D9187DCE4B006ADE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		940852DA187DCE4B006ADE66 /* Build configuration list for PBXNativeTarget "MyNextBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940852DB187DCE4B006ADE66 /* Debug */,
+				940852DC187DCE4B006ADE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		940852DD187DCE4B006ADE66 /* Build configuration list for PBXNativeTarget "MyNextBusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940852DE187DCE4B006ADE66 /* Debug */,
+				940852DF187DCE4B006ADE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 940852A6187DCE4A006ADE66 /* Project object */;
+}
