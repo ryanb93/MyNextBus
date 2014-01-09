@@ -19,6 +19,11 @@
 		940852CD187DCE4B006ADE66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940852B5187DCE4A006ADE66 /* UIKit.framework */; };
 		940852D5187DCE4B006ADE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 940852D3187DCE4B006ADE66 /* InfoPlist.strings */; };
 		940852D7187DCE4B006ADE66 /* MyNextBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 940852D6187DCE4B006ADE66 /* MyNextBusTests.m */; };
+		940852E5187DCE86006ADE66 /* MNBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940852E3187DCE86006ADE66 /* MNBViewController.m */; };
+		940852E6187DCE86006ADE66 /* MNBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940852E4187DCE86006ADE66 /* MNBViewController.xib */; };
+		940852E9187DDD72006ADE66 /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940852E8187DDD72006ADE66 /* CountdownView.m */; };
+		94646487187EE34D00C02C8F /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 94646486187EE34D00C02C8F /* bus.png */; };
+		9464648A187EF65F00C02C8F /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94646489187EF65F00C02C8F /* CountdownViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,14 @@
 		940852D2187DCE4B006ADE66 /* MyNextBusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyNextBusTests-Info.plist"; sourceTree = "<group>"; };
 		940852D4187DCE4B006ADE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		940852D6187DCE4B006ADE66 /* MyNextBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNextBusTests.m; sourceTree = "<group>"; };
+		940852E2187DCE86006ADE66 /* MNBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNBViewController.h; sourceTree = "<group>"; };
+		940852E3187DCE86006ADE66 /* MNBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNBViewController.m; sourceTree = "<group>"; };
+		940852E4187DCE86006ADE66 /* MNBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNBViewController.xib; sourceTree = "<group>"; };
+		940852E7187DDD72006ADE66 /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
+		940852E8187DDD72006ADE66 /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
+		94646486187EE34D00C02C8F /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
+		94646488187EF65F00C02C8F /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountdownViewController.h; path = ../CountdownViewController.h; sourceTree = "<group>"; };
+		94646489187EF65F00C02C8F /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountdownViewController.m; path = ../CountdownViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +122,13 @@
 			children = (
 				940852C0187DCE4A006ADE66 /* MNBAppDelegate.h */,
 				940852C1187DCE4A006ADE66 /* MNBAppDelegate.m */,
+				940852E2187DCE86006ADE66 /* MNBViewController.h */,
+				940852E3187DCE86006ADE66 /* MNBViewController.m */,
+				940852E4187DCE86006ADE66 /* MNBViewController.xib */,
+				94646488187EF65F00C02C8F /* CountdownViewController.h */,
+				94646489187EF65F00C02C8F /* CountdownViewController.m */,
+				940852E7187DDD72006ADE66 /* CountdownView.h */,
+				940852E8187DDD72006ADE66 /* CountdownView.m */,
 				940852C3187DCE4A006ADE66 /* Images.xcassets */,
 				940852B8187DCE4A006ADE66 /* Supporting Files */,
 			);
@@ -118,6 +138,7 @@
 		940852B8187DCE4A006ADE66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94646486187EE34D00C02C8F /* bus.png */,
 				940852B9187DCE4A006ADE66 /* MyNextBus-Info.plist */,
 				940852BA187DCE4A006ADE66 /* InfoPlist.strings */,
 				940852BD187DCE4A006ADE66 /* main.m */,
@@ -220,7 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94646487187EE34D00C02C8F /* bus.png in Resources */,
 				940852BC187DCE4A006ADE66 /* InfoPlist.strings in Resources */,
+				940852E6187DCE86006ADE66 /* MNBViewController.xib in Resources */,
 				940852C4187DCE4A006ADE66 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940852E5187DCE86006ADE66 /* MNBViewController.m in Sources */,
 				940852C2187DCE4A006ADE66 /* MNBAppDelegate.m in Sources */,
+				9464648A187EF65F00C02C8F /* CountdownViewController.m in Sources */,
+				940852E9187DDD72006ADE66 /* CountdownView.m in Sources */,
 				940852BE187DCE4A006ADE66 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +470,7 @@
 				940852DC187DCE4B006ADE66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		940852DD187DCE4B006ADE66 /* Build configuration list for PBXNativeTarget "MyNextBusTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +479,7 @@
 				940852DF187DCE4B006ADE66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

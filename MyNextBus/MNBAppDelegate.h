@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MNBViewController.h"
 
 @interface MNBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MNBViewController *mnbView;
 
 @end
