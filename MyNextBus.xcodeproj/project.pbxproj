@@ -24,6 +24,8 @@
 		940852E9187DDD72006ADE66 /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940852E8187DDD72006ADE66 /* CountdownView.m */; };
 		94646487187EE34D00C02C8F /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 94646486187EE34D00C02C8F /* bus.png */; };
 		9464648A187EF65F00C02C8F /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94646489187EF65F00C02C8F /* CountdownViewController.m */; };
+		9464648D187F0D0500C02C8F /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464648C187F0D0500C02C8F /* DejalActivityView.m */; };
+		9464648F187F0F2A00C02C8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9464648E187F0F2A00C02C8F /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		94646486187EE34D00C02C8F /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
 		94646488187EF65F00C02C8F /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountdownViewController.h; path = ../CountdownViewController.h; sourceTree = "<group>"; };
 		94646489187EF65F00C02C8F /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountdownViewController.m; path = ../CountdownViewController.m; sourceTree = "<group>"; };
+		9464648B187F0D0500C02C8F /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		9464648C187F0D0500C02C8F /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
+		9464648E187F0F2A00C02C8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9464648F187F0F2A00C02C8F /* CoreLocation.framework in Frameworks */,
 				940852B4187DCE4A006ADE66 /* CoreGraphics.framework in Frameworks */,
 				940852B6187DCE4A006ADE66 /* UIKit.framework in Frameworks */,
 				940852B2187DCE4A006ADE66 /* Foundation.framework in Frameworks */,
@@ -109,6 +115,7 @@
 		940852B0187DCE4A006ADE66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9464648E187F0F2A00C02C8F /* CoreLocation.framework */,
 				940852B1187DCE4A006ADE66 /* Foundation.framework */,
 				940852B3187DCE4A006ADE66 /* CoreGraphics.framework */,
 				940852B5187DCE4A006ADE66 /* UIKit.framework */,
@@ -120,6 +127,8 @@
 		940852B7187DCE4A006ADE66 /* MyNextBus */ = {
 			isa = PBXGroup;
 			children = (
+				9464648B187F0D0500C02C8F /* DejalActivityView.h */,
+				9464648C187F0D0500C02C8F /* DejalActivityView.m */,
 				940852C0187DCE4A006ADE66 /* MNBAppDelegate.h */,
 				940852C1187DCE4A006ADE66 /* MNBAppDelegate.m */,
 				940852E2187DCE86006ADE66 /* MNBViewController.h */,
@@ -263,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9464648D187F0D0500C02C8F /* DejalActivityView.m in Sources */,
 				940852E5187DCE86006ADE66 /* MNBViewController.m in Sources */,
 				940852C2187DCE4A006ADE66 /* MNBAppDelegate.m in Sources */,
 				9464648A187EF65F00C02C8F /* CountdownViewController.m in Sources */,
@@ -391,7 +401,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyNextBus/MyNextBus-Prefix.pch";
 				INFOPLIST_FILE = "MyNextBus/MyNextBus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -404,7 +416,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyNextBus/MyNextBus-Prefix.pch";
 				INFOPLIST_FILE = "MyNextBus/MyNextBus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

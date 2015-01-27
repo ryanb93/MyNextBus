@@ -48,10 +48,10 @@
     //Set up our circles
     _progressCircle.fillColor = [UIColor clearColor].CGColor;
     _progressCircle.strokeColor = [UIColor greenColor].CGColor;
-    _progressCircle.lineWidth = 15;
+    _progressCircle.lineWidth = 25;
     _whiteCircle.fillColor = [UIColor clearColor].CGColor;
     _whiteCircle.strokeColor = [UIColor whiteColor].CGColor;
-    _whiteCircle.lineWidth = 15;
+    _whiteCircle.lineWidth = 25;
 
     
     //Create UILabel and center it.
@@ -119,22 +119,24 @@
     [self.layer insertSublayer:_whiteCircle atIndex:0];
 }
 
-//-(void)pauseLayer:(CALayer*)layer
-//{
-//    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
-//    layer.speed = 0.0;
-//    layer.timeOffset = pausedTime;
-//}
-//
-//-(void)resumeLayer:(CALayer*)layer
-//{
-//    CFTimeInterval pausedTime = [layer timeOffset];
-//    layer.speed = 1.0;
-//    layer.timeOffset = 0.0;
-//    layer.beginTime = 0.0;
-//    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
-//    layer.beginTime = timeSincePause;
-//}
+-(void)pauseLayer
+{
+    CALayer *layer = _progressCircle;
+    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    layer.speed = 0.0;
+    layer.timeOffset = pausedTime;
+}
+
+-(void)resumeLayer
+{
+    CALayer *layer = _progressCircle;
+    CFTimeInterval pausedTime = [layer timeOffset];
+    layer.speed = 1.0;
+    layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    layer.beginTime = timeSincePause;
+}
 
 -(BOOL)startCountdown:(NSUInteger)minutes forRoute:(NSString *)route
 {

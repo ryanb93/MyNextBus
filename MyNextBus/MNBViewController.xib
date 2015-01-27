@@ -7,8 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MNBViewController">
             <connections>
                 <outlet property="busIcon" destination="0gX-I6-urk" id="ul5-3z-bh4"/>
+                <outlet property="busRouteButton" destination="3Hj-1j-ylv" id="e7V-6Z-bU4"/>
                 <outlet property="busStopButton" destination="nNr-Wn-DRy" id="aq8-De-6Sd"/>
-                <outlet property="countdownView" destination="AKh-TC-CMa" id="eG4-jx-XgV"/>
+                <outlet property="countdownView" destination="AKh-TC-CMa" id="SoO-er-Khh"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -20,37 +21,36 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKh-TC-CMa" customClass="CountdownView">
                     <rect key="frame" x="0.0" y="65" width="320" height="459"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uGe-J3-Hh7">
-                            <rect key="frame" x="141" y="0.0" width="39" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </pageControl>
-                    </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="vcs-CD-Tbl" appends="YES" id="AHs-Of-J90"/>
+                        <outletCollection property="gestureRecognizers" destination="dn7-Qa-74d" appends="YES" id="mBO-bT-f86"/>
+                    </connections>
                 </view>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYO-dH-GhN">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <gestureRecognizers/>
                     <items>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="pXF-sO-VD1"/>
                         <barButtonItem title="Item" image="bus.png" id="0gX-I6-urk">
                             <connections>
-                                <action selector="showBusStops:" destination="-1" id="9o8-Jy-3FZ"/>
+                                <action selector="showBusRoutes:" destination="-1" id="0Ii-lX-44p"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem title="403" id="3Hj-1j-ylv">
+                            <connections>
+                                <action selector="showBusRoutes:" destination="-1" id="k0r-bE-8IZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="pXF-sO-VD1"/>
                         <barButtonItem title="Warlingham Green" id="nNr-Wn-DRy">
                             <connections>
                                 <action selector="showBusStops:" destination="-1" id="mDr-sh-kjb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yjy-zM-zia"/>
                     </items>
                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="p5d-38-fbK" appends="YES" id="5zX-0b-wxt"/>
-                        <outletCollection property="gestureRecognizers" destination="Ao2-PB-DDA" appends="YES" id="n49-UY-Ql7"/>
-                    </connections>
                 </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -64,7 +64,6 @@
                 <constraint firstItem="OYO-dH-GhN" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="UeU-Bk-AW9"/>
                 <constraint firstItem="OYO-dH-GhN" firstAttribute="top" secondItem="AKh-TC-CMa" secondAttribute="bottom" id="X4A-cp-PU2"/>
                 <constraint firstItem="AKh-TC-CMa" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="afK-DH-W7b"/>
-                <constraint firstItem="AKh-TC-CMa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1" secondAttribute="top" constant="65" id="dIE-S8-Mrq"/>
                 <constraint firstItem="AKh-TC-CMa" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="u83-Sh-x7L"/>
                 <constraint firstItem="OYO-dH-GhN" firstAttribute="top" secondItem="AKh-TC-CMa" secondAttribute="bottom" id="wxs-z5-NFH"/>
             </constraints>
@@ -72,15 +71,14 @@
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <swipeGestureRecognizer direction="up" id="p5d-38-fbK">
+        <tapGestureRecognizer id="vcs-CD-Tbl">
             <connections>
-                <action selector="showBusStops:" destination="-1" id="DwW-pI-cfH"/>
-                <outlet property="delegate" destination="-1" id="14B-f8-95F"/>
+                <action selector="dismissListView:" destination="-1" id="x8T-wB-lRH"/>
             </connections>
-        </swipeGestureRecognizer>
-        <swipeGestureRecognizer direction="down" id="Ao2-PB-DDA">
+        </tapGestureRecognizer>
+        <swipeGestureRecognizer direction="down" id="dn7-Qa-74d">
             <connections>
-                <action selector="hideBusStops:" destination="-1" id="5wz-Hv-NUe"/>
+                <action selector="dismissListView:" destination="-1" id="vih-xI-Nep"/>
             </connections>
         </swipeGestureRecognizer>
     </objects>

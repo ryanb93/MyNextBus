@@ -23,10 +23,17 @@
     return self;
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear");
+    [self.countdownView pauseLayer];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self.countdownView resumeLayer];
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,7 +10,11 @@
 
 @interface MNBViewController () {
     NSString *currentStop;
+    NSString *currentRoute;
     BOOL busStopIsVisisble;
+    TableType tableType;
+    CLLocationManager *locationManager;
+
 }
 
 @end
@@ -24,11 +28,19 @@
         
         //Set the navigation bar title.
         [self setTitle:@"Next Bus"];
-        //Init the bus stops array.
+
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [locationManager startUpdatingLocation];
         
         busStopIsVisisble = NO;
         
+            
         _busStops = [NSMutableArray arrayWithObjects:@"Warlingham Green", @"Church Road", @"Hamsey Green", @"Sanderstead", nil];
+        
+        _busRoutes = [NSMutableArray arrayWithObjects:@"403", @"412", @"407", @"409", nil];
                 
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         screenRect.origin.y = screenRect.size.height;
@@ -41,44 +53,66 @@
         [_busStopTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
         
         [self.view addSubview:_busStopTable];
-        
     }
     return self;
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [_countdownView pauseLayer];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [_countdownView resumeLayer];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //Move to the bottom row.
-    //    int row = [_busStopPickerView numberOfRowsInComponent:0] - 1;
-    //    [_busStopPickerView selectRow:row inComponent:0 animated:NO];
-    //    [self pickerView:_busStopPickerView didSelectRow:row inComponent:0];
-    
+    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Fetching times"].showNetworkActivityIndicator = YES;
+    [self performSelector:@selector(stopSpinner) withObject:self afterDelay:3.0];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)stopSpinner
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
+    [DejalBezelActivityView removeViewAnimated:YES];
 }
 
 -(IBAction)showBusStops:(id)sender {
     if(!busStopIsVisisble) {
+        tableType = stops;
+        [self.busStopTable reloadData];
         [self busStopViewShouldBeVisisble:YES];
     }
-    else if([sender isKindOfClass:[UIBarButtonItem class]] || [sender isKindOfClass:[UITableView class]]) {
-        if(busStopIsVisisble) {
+    else {
+        if(tableType == stops) {
             [self busStopViewShouldBeVisisble:NO];
         }
+        tableType = stops;
+        [self.busStopTable reloadData];
     }
-    
 }
 
--(IBAction)hideBusStops:(id)sender {
+-(IBAction)showBusRoutes:(id)sender {
+    if(!busStopIsVisisble) {
+        tableType = routes;
+        [self.busStopTable reloadData];
+        [self busStopViewShouldBeVisisble:YES];
+    }
+    else {
+        if(tableType == routes) {
+            [self busStopViewShouldBeVisisble:NO];
+        }
+        tableType = routes;
+        [self.busStopTable reloadData];
+    }
+}
+
+-(IBAction)dismissListView:(id)sender
+{
     if(busStopIsVisisble) {
         [self busStopViewShouldBeVisisble:NO];
     }
@@ -101,7 +135,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_busStops count];
+    if(tableType == stops)
+        return [_busStops count];
+    
+    return [_busRoutes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -114,24 +151,41 @@
                                       reuseIdentifier:CellIdentifier];
     }
     
-    [[cell textLabel] setText:[_busStops objectAtIndex:[indexPath row]]];
+    NSString *text = [_busStops objectAtIndex:[indexPath row]];
+    if(tableType == routes)
+        text = [_busRoutes objectAtIndex:[indexPath row]];
+    
+    [[cell textLabel] setText:text];
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *selectedStop = [_busStops objectAtIndex:[indexPath row]];
-    [_busStopButton setTitle:selectedStop];
-    [self showBusStops:tableView];
     //If the stop has changed.
-    if(currentStop != selectedStop) {
-        currentStop = selectedStop;
-        //Get the time for the next bus from this bus stop.
-        //Set the countdown view.
-        NSUInteger minutes = rand() % 9 + 1;
-        NSString *route = @"403";
-        [_countdownView startCountdown:minutes forRoute:route];
+    if(tableType == stops) {
+        NSString *selected = [_busStops objectAtIndex:[indexPath row]];
+        [_busStopButton setTitle:selected];
+        if(currentStop != selected) {
+            currentStop = selected;
+            //Get the time for the next bus from this bus stop.
+            //Set the countdown view.
+            NSUInteger minutes = rand() % 9 + 1;
+            [_countdownView startCountdown:minutes forRoute:currentRoute];
+        }
+        [self showBusStops:tableView];
+    }
+    else if(tableType == routes) {
+        NSString *selected = [_busRoutes objectAtIndex:[indexPath row]];
+        [_busRouteButton setTitle:selected];
+        if(currentRoute != selected) {
+            currentRoute = selected;
+            //Get the time for the next bus from this bus stop.
+            //Set the countdown view.
+            NSUInteger minutes = rand() % 9 + 1;
+            [_countdownView startCountdown:minutes forRoute:currentRoute];
+        }
+        [self showBusRoutes:tableView];
     }
 }
 
@@ -181,6 +235,11 @@
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
     // The selected item reflected in the page indicator.
     return 0;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *lastest = [locations lastObject];
+    [manager stopUpdatingLocation];
 }
 
 @end

@@ -15,5 +15,7 @@
 
 -(BOOL)startCountdown:(NSUInteger)minutes forRoute:(NSString *)route;
 
+-(void)pauseLayer;
+-(void)resumeLayer;
 
 @end

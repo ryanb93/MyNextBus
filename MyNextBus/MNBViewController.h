@@ -7,24 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "CountdownViewController.h"
+#import "DejalActivityView.h"
 
-@interface MNBViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIPageViewControllerDataSource> {
+@interface MNBViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate> {
     
 }
 
+typedef enum {
+    stops,
+    routes
+} TableType;
+
 //IBOutlets
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *busIcon;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *busRouteButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *busStopButton;
+@property (weak, nonatomic) IBOutlet CountdownView *countdownView;
 
 @property (strong, nonatomic) NSMutableArray *busStops;
+@property (strong, nonatomic) NSMutableArray *busRoutes;
 
 //Views
 @property (strong, nonatomic) UITableView *busStopTable;
-@property (strong, nonatomic) UIPageViewController *pageController;
-@property (strong, nonatomic) CountdownViewController *countdownViewController;
 
 -(IBAction)showBusStops:(id)sender;
--(IBAction)hideBusStops:(id)sender;
+-(IBAction)showBusRoutes:(id)sender;
+-(IBAction)dismissListView:(id)sender;
 
 @end
